@@ -238,16 +238,9 @@ section:hover {
 }
 
 .AboutMe img,
+.Journey img,
 .Education img {
   width: 100%;
-  max-width: 350px;
-  border-radius: 12px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-.Journey img {
-  width: 100%;
-  max-height: 350px;
   max-width: 350px;
   border-radius: 12px;
   object-fit: cover;
@@ -257,7 +250,8 @@ section:hover {
 /* Ensure it stacks vertically on smaller screens */
 @media (max-width: 768px) {
   .about-container,
-  .education-container {
+  .education-container,
+  .journey-container {
     flex-direction: column;
     text-align: center;
   }
@@ -354,20 +348,6 @@ section:hover {
 .Journey h2 {
   margin-bottom: 1.5rem;
   margin-top: 2rem;
-}
-.journey-text {
-  max-width: 800px;
-}
-
-@media (max-width: 900px) {
-  .journey-overview {
-    grid-template-columns: 1fr;
-  }
-
-  .coding-pic {
-    max-width: 100%;
-    justify-self: center;
-  }
 }
 
 .timeline-shell {
