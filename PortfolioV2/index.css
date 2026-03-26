@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 :root {
   color-scheme: light dark;
 
@@ -5,6 +8,7 @@
   --bg: #f5f7fa;
   --text: #1a1a1a;
   --accent: #0066cc;
+  --secondary: #4da6ff;
   --border: #e0e0e0;
 
   /* Performance-friendly animation easing */
@@ -18,8 +22,33 @@
     --bg: #0a0e27;
     --text: #e8eef5;
     --accent: #4da6ff;
+    --secondary: #1e2749;
     --border: #1e2749;
   }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 0.25rem;
+  right: center;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition:
+    opacity var(--transition-base),
+    transform var(--transition-base);
+}
+.back-to-top img {
+  width: 20px;
+  height: 20px;
+  font-weight: 900;
+}
+.back-to-top:hover {
+  opacity: 1;
+  transform: translateY(-4px);
 }
 
 /* 1. Modern Minimal Reset */
@@ -64,6 +93,7 @@ svg {
   .Titleicon img,
   .skills img,
   .timeline-header img,
+  .back-to-top img,
   .course-list img {
     /* Perfectly flips black pixels to white pixels */
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
