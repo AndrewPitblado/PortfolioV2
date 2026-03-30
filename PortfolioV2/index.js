@@ -14,3 +14,13 @@ const updateFavicon = (isDark) => {
 const media = window.matchMedia("(prefers-color-scheme: dark)");
 updateFavicon(media.matches);
 media.addEventListener("change", (event) => updateFavicon(event.matches));
+
+document.querySelectorAll(".timeline-card").forEach((card) => {
+  card.addEventListener("toggle", () => {
+    if (!card.open) {
+      requestAnimationFrame(() => {
+        card.scrollTop = 0;
+      });
+    }
+  });
+});

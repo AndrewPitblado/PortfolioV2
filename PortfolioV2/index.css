@@ -534,7 +534,13 @@ section:hover {
     margin-top var(--transition-base);
 }
 .timeline-card:hover,
-.timeline-card:focus-within,
+.timeline-card:focus-within {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -12px
+    color-mix(in srgb, var(--accent) 35%, transparent 65%);
+}
+
 .timeline-card[open] {
   border-color: var(--accent);
   transform: translateY(-4px);
@@ -543,12 +549,16 @@ section:hover {
   min-height: 245px;
   overflow-y: auto;
 }
-.timeline-card:hover .timeline-details,
-.timeline-card:focus-within .timeline-details,
 .timeline-card[open] .timeline-details {
   opacity: 1;
   max-height: 140px;
   margin-top: 0.75rem;
+}
+
+.timeline-card:not([open]) .timeline-details {
+  opacity: 0;
+  max-height: 0;
+  margin-top: 0;
 }
 
 @media (max-width: 780px),
@@ -584,13 +594,21 @@ section:hover {
   }
 
   .timeline-card:hover,
-  .timeline-card:focus-within,
-  .timeline-card[open] {
+  .timeline-card:focus-within {
     min-height: auto;
     transform: none;
     box-shadow: 0 6px 16px -10px
       color-mix(in srgb, var(--text) 40%, transparent 60%);
     border-color: var(--border);
+    overflow-y: hidden;
+  }
+
+  .timeline-card[open] {
+    min-height: auto;
+    transform: none;
+    box-shadow: 0 6px 16px -10px
+      color-mix(in srgb, var(--text) 40%, transparent 60%);
+    border-color: var(--accent);
     overflow-y: hidden;
   }
 
