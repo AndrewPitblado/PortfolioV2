@@ -409,7 +409,7 @@ section:hover {
 
 .timeline-track {
   display: grid;
-  grid-template-columns: repeat(6, minmax(250px, 1fr));
+  grid-template-columns: repeat(6, minmax(300px, 1fr));
   gap: 1rem;
   min-width: 1200px;
   padding-top: 2.25rem;
