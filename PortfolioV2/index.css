@@ -763,6 +763,7 @@ section:hover {
   background-color: transparent;
   color: var(--text);
   text-align: center;
+  align-content: center;
   flex: 1; /* Makes buttons equal width */
   transition:
     background-color var(--transition-base),
