@@ -196,7 +196,7 @@ section:hover {
   width: 150px;
   height: 150px;
   flex-shrink: 0;
-  border-radius: 50%; /* Absolute circle */
+  border-radius: 15%; /* Absolute circle */
   object-fit: cover; /* Ensures image isn't distorted */
   border: 3px solid var(--accent);
   box-shadow: 0 8px 16px -4px
